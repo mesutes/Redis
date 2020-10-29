@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ServiceStack.Redis;
+using System;
 
 namespace Redis
 {
@@ -6,7 +7,10 @@ namespace Redis
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            using (IRedisClient client = new RedisClient()) 
+            {
+                
+            }
         }
     }
 }
