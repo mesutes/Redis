@@ -103,7 +103,6 @@ namespace Redis
                         break;
                     default:
                         Console.WriteLine("Hatalı giriş yaptınız");
-                        Console.Read();
                         break;
                 }
 
@@ -114,18 +113,7 @@ namespace Redis
 
         static void MessageAction(string message)
         {
-            int initialCursorTop = Console.CursorTop;
-            int initialCursorLeft = Console.CursorLeft;
-
-            Console.MoveBufferArea(0, initialCursorTop, Console.WindowWidth,
-                                   1, 0, initialCursorTop + 1);
-            Console.CursorTop = initialCursorTop;
-            Console.CursorLeft = 0;
-
             Console.WriteLine(message);
-
-            Console.CursorTop = initialCursorTop + 1;
-            Console.CursorLeft = initialCursorLeft;
         }
     }
 }
